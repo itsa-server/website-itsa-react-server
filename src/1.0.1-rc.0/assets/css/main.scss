@@ -1,0 +1,112 @@
+$leftmenu-width: 12em;
+$switch-menu-width: 48em;
+
+body {
+    font-size: 120%;
+    /*
+     set the font-family equal to pure-grid
+    */
+    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+/* *******************************************************************
+This is the parent `<div>` that contains the menu and the content area.
+*/
+body >div {
+    position: relative;
+    padding-left: 0;
+}
+
+
+h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2.7em 0 1.2em;
+    font-size: 1.5em;
+}
+
+h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 1.8em 0 1em;
+    font-size: 1.1em;
+}
+
+h3 {
+    margin: 50px 0 20px 0;
+    font-weight: 300;
+    color: #888;
+}
+    h3 i {
+        margin-right: 7px;
+    }
+
+
+/* *******************************************************************
+The content `<div>` is where all your content goes.
+*/
+.main {
+    margin: 6em auto 50px;
+    padding: 0 2em;
+    line-height: 1.6em;
+}
+
+/* *******************************************************************
+Main header div
+*/
+h1.header {
+     margin: 0;
+     color: #1f8dd6;
+     font-size: 2.2em;
+     text-align: center;
+     padding: 0.1em 0 0;
+     border-bottom: 1px solid #bbb;
+ }
+
+a,
+a:visited {
+    color: #666;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #1f8dd6;
+}
+
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: $switch-menu-width) {
+
+    .header,
+    .main {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    body >div {
+        padding-left: $leftmenu-width; /* left col width "#menu" */
+        left: 0;
+    }
+}
+
+@media (max-width: $switch-menu-width) {
+    /* Only apply this when the window is small. Otherwise, the following
+    case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
+    body >div.active {
+        position: relative;
+        left: $leftmenu-width;
+    }
+}
