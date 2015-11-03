@@ -4,7 +4,7 @@
     "debug": false,
     "inlinecss": true,
     "page-description": "my awesome page",
-    "google-analytics": "",
+    "google-analytics": "UA-69638313-1",
     "sessiontime": 10,
     "meta-viewport": {
         "desktop": "width=device-width, initial-scale=1.0",
