@@ -5,17 +5,17 @@ require('../assets/css/purecss/buttons.css');
 require('../assets/css/main.scss');
 require('../assets/css/index.scss');
 
-const React = require('react'),
+var React = require('react'),
       MenuTop = require('../modules/menu-top.jsx'),
       MenuLeft = require('../modules/menu-left.jsx'),
       Reflux = require('reflux'),
       store = require('../reflux/stores/app-store'),
       logo = require('../assets/images/itsa.png');
 
-const Body = React.createClass({
+var Body = React.createClass({
     mixins: [Reflux.connect(store)],
-    render() {
-        const activeClass = this.state.menuActivated ? 'active' : '';
+    render: function() {
+        var activeClass = this.state.menuActivated ? 'active' : '';
         return (
             <div className={activeClass}>
                 <MenuTop {...this.props}/>
@@ -40,7 +40,7 @@ const Body = React.createClass({
                             <div className="pure-g">
                                 <div className="pure-u-1 pure-u-md-1-2">
                                     <ul>
-                                        {this.props.messages.features_first.map((feature, i) => {
+                                        {this.props.messages.features_first.map(function(feature, i) {
                                             return (
                                                 <li key={i}><i className="fa fa-rocket" />{feature}</li>
                                             );
@@ -49,7 +49,7 @@ const Body = React.createClass({
                                 </div>
                                 <div className="pure-u-1 pure-u-md-1-2">
                                     <ul>
-                                        {this.props.messages.features_second.map((feature, i) => {
+                                        {this.props.messages.features_second.map(function(feature, i) {
                                             return (
                                                 <li key={i}><i className="fa fa-rocket" />{feature}</li>
                                             );

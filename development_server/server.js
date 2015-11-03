@@ -4,7 +4,7 @@
 // so we can start it up from any other directory:
 process.chdir(__dirname);
 
-const Hapi = require('hapi'),
+var Hapi = require('hapi'),
       Vision = require('vision'),
       Inert = require('inert'),
       reactServer = require('itsa-react-server'),
@@ -16,7 +16,7 @@ const Hapi = require('hapi'),
       };
 
 // setting up the server:
-const server = new Hapi.Server();
+var server = new Hapi.Server();
 
 // if you need additional view-eingines, specify them here:
 /*
@@ -26,21 +26,21 @@ ReactServerPlugin.options.engines: {
 */
 
 // ItsaServer will handle the connection and all further utilities:
-server.register([Vision, Inert, ReactServerPlugin], err => {
+server.register([Vision, Inert, ReactServerPlugin], function(err) {
     if (err) {
         console.log(err);
         throw err; // something bad happened loading the plugins
     }
 
     // starting the server:
-    server.start((err) => {
-        let notify;
+    server.start(function(err) {
+        var notify;
 
         if (err) {
             console.log(err);
             return;
         }
-        const args = process.argv,
+        var args = process.argv,
               environment = args[2] || 'production',
               message = 'Server running '+environment+' at port: '+ server.info.port;
 
@@ -48,7 +48,7 @@ server.register([Vision, Inert, ReactServerPlugin], err => {
             notify = require('node-notify');
             notify({
                 title: 'Starting development server',
-                message,
+                message: message,
                 sound: true
             });
         }
