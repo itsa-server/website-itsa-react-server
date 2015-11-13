@@ -30,7 +30,7 @@ var Body = React.createClass({
                             </p>
                             <p>
                                 <a href="https://www.npmjs.com/package/itsa-cli" className="pure-button pure-button-primary">{this.props.messages.install} cli</a>
-                                <a href="https://github.com/ItsAsbreuk/website-itsa-react-server/tree/master/src/3.0.1" className="pure-button pure-button-primary">{this.props.messages.viewthis} website-code</a>
+                                <a href="https://github.com/ItsAsbreuk/website-itsa-react-server/tree/master/src/3.0.2" className="pure-button pure-button-primary">{this.props.messages.viewthis} website-code</a>
                             </p>
                         </div>
                     </div>

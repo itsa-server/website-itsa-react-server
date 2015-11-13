@@ -1,1 +1,0 @@
-Akties (verwerking AJAX-requests)
