@@ -1,0 +1,124 @@
+$leftmenu-width-with-padding: 13em;
+$switch-menu-width: 49em;
+$height-splash-container: 33em;
+$content-top: 27em;
+
+.logo-large {
+    height: 162px;
+    width: 162px;
+}
+
+/*
+ * -- SPLASH STYLES --
+ * This is the blue top section that appears on the page.
+ */
+
+.splash-container {
+    background: #EEE;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: $height-splash-container;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    padding-left: $leftmenu-width-with-padding;
+    padding-right: 1em;
+}
+
+/* This is the main heading that appears on the blue section */
+.splash-head {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 3px solid #BBB;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+    letter-spacing: 0.2em;
+}
+
+/* This is the subheading that appears on the blue section */
+.splash-subhead {
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.splash-container .pure-button {
+    margin: 0 0.5em;
+    min-width: 13em;
+}
+
+/*
+ * -- CONTENT STYLES --
+ * This represents the content area (everything below the blue section)
+ */
+.content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+    position: absolute;
+    top: $content-top;
+    left: 0;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+
+}
+
+.content {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+/* This is the class used for the footer */
+.footer {
+    border-top: solid 1px #999;
+    padding-left: $leftmenu-width-with-padding;
+    padding-top: 0.3em;
+    padding-right: 1em;
+    font-size: 0.8em;
+    text-align: right;
+    color: #999;
+    margin-top: 3em;
+}
+
+.footer a {
+    color: #999;
+}
+
+.footer a:hover {
+    color: #000;
+}
+
+@media (max-width: $switch-menu-width) {
+
+    .splash {
+        padding-left: 1em;
+        width: 90%;
+    }
+
+    .content,
+    .footer {
+        padding-left: 1em;
+    }
+
+    body >div.active .splash {
+        padding-left: $leftmenu-width-with-padding;
+    }
+}
