@@ -1,0 +1,26 @@
+table {
+    empty-cells: show;
+}
+
+td {
+    height: 1em;
+    padding: 0.3em;
+}
+
+td.border {
+    border: solid 1px #000;
+    text-align: center;
+    background-color: #DDD;
+}
+
+td.left-border {
+    border-left: solid 1px #000;
+}
+
+td.special {
+    color: #e51b24;
+}
+
+td.module {
+    color: #1f8dd6;
+}
