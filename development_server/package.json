@@ -1,6 +1,6 @@
 {
   "name": "website-itsa-react-server",
-  "version": "3.0.22",
+  "version": "4.0.3",
   "description": "Itsa React server",
   "author": [
     {
@@ -17,15 +17,16 @@
     "fs-promise": "^0.3.1",
     "hapi": "^10.5.0",
     "inert": "^3.1.0",
-    "itsa-react-server-webpack-builder": "^1.0.2",
-    "itsa-apps": "^1.0.0",
-    "itsa-classes": "^1.0.2",
-    "itsa-react-server": "^1.0.8",
-    "itsa-react-router": "^2.0.0",
-    "itsa-react-fs-markdown": "^2.0.0",
-    "itsa-client-controller": "^2.0.0",
-    "itsa-reflux-clientstorage": "^2.0.0",
-    "react": "^0.13.3",
+    "itsa-react-server-webpack-builder": "^1.0.5",
+    "itsa-apps": "^2.3.7",
+    "itsa-classes": "^1.0.3",
+    "itsa-react-server": "^1.2.2",
+    "itsa-react-router": "^2.3.8",
+    "itsa-react-fs-markdown": "^2.0.2",
+    "itsa-client-controller": "^2.3.5",
+    "itsa-reflux-clientstorage": "^2.4.0",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
     "reflux": "^0.3.0",
     "useragent": "^2.1.7",
     "vision": "^3.0.0"

@@ -1,1 +1,0 @@
-module.exports = require('../modules/general-Body-Component.js');

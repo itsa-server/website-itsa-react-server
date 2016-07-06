@@ -1,1 +1,0 @@
-Actions (handling AJAX-requests)
